@@ -1,0 +1,147 @@
+/* ── Blink dot ── */
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.6); }
+}
+
+.badge-dot {
+  animation: blink 2s infinite;
+}
+
+/* ── Pulse WA float ── */
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0,200,83,0.6); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 14px rgba(0,200,83,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0,200,83,0); }
+}
+
+.wa-float-btn {
+  animation: pulse-ring 2.2s infinite;
+}
+
+/* ── Scroll hint line ── */
+@keyframes scroll-hint-anim {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.scroll-hint-line {
+  animation: scroll-hint-anim 1.6s ease-in-out infinite;
+}
+
+/* ── Canvas shimmer on load ── */
+@keyframes fade-in-canvas {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#bg-canvas {
+  animation: fade-in-canvas 2s ease-out forwards;
+}
+
+/* ── Hero entrance ── */
+@keyframes hero-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content .badge      { animation: hero-slide-up 0.7s var(--transition) 0.2s both; }
+.hero-content .hero-h1    { animation: hero-slide-up 0.7s var(--transition) 0.35s both; }
+.hero-content .hero-sub   { animation: hero-slide-up 0.7s var(--transition) 0.5s both; }
+.hero-content .hero-ctas  { animation: hero-slide-up 0.7s var(--transition) 0.65s both; }
+
+/* ── Metric counter glow ── */
+@keyframes accent-glow {
+  0%, 100% { text-shadow: 0 0 8px rgba(0,229,255,0.3); }
+  50%       { text-shadow: 0 0 20px rgba(0,229,255,0.7); }
+}
+
+.metric-number {
+  animation: accent-glow 3s ease-in-out infinite;
+}
+
+/* ── Floor build shimmer ── */
+@keyframes floor-shimmer {
+  from { left: -100%; }
+  to   { left: 100%; }
+}
+
+.floor.built::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(33,150,243,0.25), transparent);
+  animation: floor-shimmer 0.5s ease-out forwards;
+}
+
+/* ── Case funnel entrance ── */
+@keyframes funnel-slide {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.funnel-item.visible {
+  animation: funnel-slide 0.5s var(--transition) both;
+}
+
+.funnel-item:nth-child(1) { animation-delay: 0.1s; }
+.funnel-item:nth-child(2) { animation-delay: 0.2s; }
+.funnel-item:nth-child(3) { animation-delay: 0.3s; }
+.funnel-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ── Number card glow accent ── */
+.number-big {
+  animation: accent-glow 4s ease-in-out infinite;
+}
+
+/* ── Nav logo subtle entrance ── */
+@keyframes logo-drop {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-logo {
+  animation: logo-drop 0.6s var(--transition) 0.1s both;
+}
+
+/* ── Partner hover ── */
+.partner-badge {
+  transition: opacity 0.25s var(--transition), border-color 0.25s var(--transition), transform 0.25s var(--transition);
+}
+
+.partner-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Btn glow after active ── */
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Success state on submit ── */
+@keyframes success-pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.btn-success {
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  animation: success-pop 0.3s ease-out;
+}
+
+/* ── Grid line hero ── */
+.hero::before {
+  animation: fade-in-canvas 3s ease-out both;
+}

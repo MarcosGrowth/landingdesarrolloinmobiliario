@@ -1,0 +1,406 @@
+/* ── Canvas 3D ── */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Scroll progress bar ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--blue-bright);
+  z-index: 999;
+  transition: width 0.1s linear;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Nav ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  background: rgba(4, 13, 26, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s var(--transition);
+}
+
+nav.scrolled {
+  height: 56px;
+  background: rgba(4, 13, 26, 0.92);
+  border-bottom-color: var(--border);
+}
+
+.nav-logo {
+  height: 52px;
+  mix-blend-mode: screen;
+}
+
+nav.scrolled .nav-logo {
+  height: 40px;
+}
+
+.nav-actions {
+  position: absolute;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── Main ── */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-h);
+  background: linear-gradient(
+    90deg,
+    rgba(4,13,26,0.96) 40%,
+    rgba(4,13,26,0.72) 65%,
+    rgba(4,13,26,0.28) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(33,150,243,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33,150,243,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+/* ── Sections base ── */
+section {
+  background: rgba(4, 13, 26, 0.88);
+  position: relative;
+  z-index: 1;
+}
+
+section .container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-alt {
+  background: rgba(7, 20, 40, 0.92);
+}
+
+/* ── Metrics band ── */
+.metrics-band {
+  background: rgba(11, 29, 54, 0.95);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.metrics-band .container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.metrics-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--border) 0,
+    var(--border) 1px,
+    transparent 1px,
+    transparent calc(20% )
+  );
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ── Video section ── */
+.video-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Tower section ── */
+.tower-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── Problems grid ── */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Case study ── */
+.case-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ── Industry numbers ── */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Partners band ── */
+.partners-band {
+  background: rgba(11, 29, 54, 0.9);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.partners-band .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ── CTA / Form section ── */
+.cta-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── Footer ── */
+footer {
+  background: rgba(4, 13, 26, 0.98);
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+footer .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-logo {
+  height: 44px;
+  mix-blend-mode: screen;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-nav a {
+  color: var(--gray);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--white);
+}
+
+.footer-copy {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+/* ── WhatsApp float ── */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.wa-float.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.wa-float-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,200,83,0.4);
+  position: relative;
+}
+
+.wa-float-tooltip {
+  background: var(--surface);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all 0.2s var(--transition);
+  pointer-events: none;
+}
+
+.wa-float:hover .wa-float-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .video-section .container,
+  .tower-section .container,
+  .case-section .container,
+  .cta-section .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .problems-grid,
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-wa {
+    display: none;
+  }
+
+  .wa-float-tooltip {
+    display: none;
+  }
+
+  .partners-band .container {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  section .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-grid .metric-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .problems-grid,
+  .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

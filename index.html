@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MC Growth Agency — Performance marketing especializado en desarrollos inmobiliarios en Argentina. Más leads, más cierres, sistema real." />
+  <title>MC Growth Agency · Desarrollos Inmobiliarios Argentina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- 1. Scroll progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Progreso de scroll"></div>
+
+  <!-- 2. Canvas 3D -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- 3. Nav -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <img src="assets/logo.png" alt="MC Growth Agency" class="nav-logo" />
+    <div class="nav-actions">
+      <a href="https://wa.me/5491125615082?text=Hola!%20Quiero%20agendar%20mi%20diagn%C3%B3stico%20gratuito%20para%20mi%20desarrollo%20inmobiliario."
+         class="btn btn-wa btn-sm nav-wa wa-link"
+         target="_blank" rel="noopener"
+         aria-label="Contactar por WhatsApp">
+        WhatsApp
+      </a>
+      <a href="#formulario" class="btn btn-primary btn-sm">Diagnóstico Gratis →</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- 4. Hero -->
+    <section class="hero" aria-label="Inicio">
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Solo para desarrollos inmobiliarios activos
+          </div>
+          <h1 class="hero-h1">
+            Tu proyecto tiene leads.<br />
+            Lo que falta es <em>convertirlos.</em>
+          </h1>
+          <p class="hero-sub">
+            Somos la agencia de performance marketing que trabaja exclusivamente con desarrollos inmobiliarios en Argentina.
+            Sin plantillas genéricas: sistema real, métricas reales, ventas reales.
+          </p>
+          <div class="hero-ctas">
+            <a href="#formulario" class="btn btn-primary">Agendá tu diagnóstico gratis →</a>
+            <a href="https://wa.me/5491125615082?text=Hola!%20Quiero%20agendar%20mi%20diagn%C3%B3stico%20gratuito%20para%20mi%20desarrollo%20inmobiliario."
+               class="btn btn-wa wa-link" target="_blank" rel="noopener"
+               aria-label="Contactar por WhatsApp">
+              Escribinos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-hint-line"></div>
+      </div>
+    </section>
+
+    <!-- 5. Métricas -->
+    <section class="metrics-band" aria-label="Datos del mercado inmobiliario">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item fi">
+            <div class="metric-number" data-target="72" data-suffix="%">72%</div>
+            <div class="metric-label">De los leads se pierden sin seguimiento</div>
+            <div class="metric-source">NAR Real Estate Report 2024</div>
+          </div>
+          <div class="metric-item fi fi-delay-1">
+            <div class="metric-number" data-target="3" data-suffix="x">3x</div>
+            <div class="metric-label">Más conversiones con sistema estructurado</div>
+            <div class="metric-source">Harvard Business Review</div>
+          </div>
+          <div class="metric-item fi fi-delay-2">
+            <div class="metric-number" data-target="5" data-suffix=" min">5 min</div>
+            <div class="metric-label">Tiempo de respuesta ideal para un lead</div>
+            <div class="metric-source">MIT Lead Response Study</div>
+          </div>
+          <div class="metric-item fi fi-delay-3">
+            <div class="metric-number" data-target="3469" data-prefix="$">$3.469</div>
+            <div class="metric-label">CPL real — Meta Ads Proyecto Moyano</div>
+            <div class="metric-source">Dato de cliente 2025</div>
+          </div>
+          <div class="metric-item fi fi-delay-4">
+            <div class="metric-number" data-target="20" data-suffix="'">20'</div>
+            <div class="metric-label">Diagnóstico gratuito sin compromiso</div>
+            <div class="metric-source">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Video -->
+    <section class="video-section" aria-label="Por qué MC Growth Agency">
+      <div class="container">
+        <div class="video-text">
+          <span class="kicker fi">Quiénes somos</span>
+          <h2 class="section-h2 fi fi-delay-1">No somos una agencia de<br /><em>marketing genérico.</em></h2>
+          <p class="section-sub fi fi-delay-2">
+            Trabajamos exclusivamente con desarrollos inmobiliarios porque entendemos el ciclo de venta,
+            los tiempos de decisión y el perfil del comprador argentino. Cada campaña, cada landing,
+            cada automatización está diseñada para tu nicho.
+          </p>
+          <a href="#formulario" class="btn btn-primary fi fi-delay-3">Quiero conocer más →</a>
+        </div>
+        <div class="video-wrapper fi fi-delay-2">
+          <iframe
+            src="https://www.youtube.com/embed/efCsKnQzIIM?si=6AOM_fC-XrUKQ-6z"
+            title="MC Growth Agency — Performance para desarrollos inmobiliarios"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Torre + Pasos -->
+    <section class="tower-section section-alt" aria-label="Nuestro proceso">
+      <div class="container">
+
+        <div class="tower-col">
+          <span class="kicker fi">Metodología</span>
+          <h2 class="section-h2 fi fi-delay-1">Un sistema que<br /><em>cierra ventas,</em><br />no solo genera leads.</h2>
+          <div class="steps-list steps-list-spaced">
+            <div class="step-item fi fi-delay-1">
+              <div class="step-num">01</div>
+              <div>
+                <div class="step-title">Diagnóstico y estrategia</div>
+                <div class="step-desc">Entendemos tu proyecto, tu público y tus canales actuales para armar un plan a medida.</div>
+              </div>
+            </div>
+            <div class="step-item fi fi-delay-2">
+              <div class="step-num">02</div>
+              <div>
+                <div class="step-title">Campañas de captación</div>
+                <div class="step-desc">Meta Ads y Google Ads segmentados por zona, perfil de comprador y etapa de decisión.</div>
+              </div>
+            </div>
+            <div class="step-item fi fi-delay-3">
+              <div class="step-num">03</div>
+              <div>
+                <div class="step-title">Landing optimizada</div>
+                <div class="step-desc">Página clara, rápida y alineada al perfil del comprador. Sin distracciones, sin fricción.</div>
+              </div>
+            </div>
+            <div class="step-item fi fi-delay-4">
+              <div class="step-num">04</div>
+              <div>
+                <div class="step-title">Sistema de seguimiento</div>
+                <div class="step-desc">CRM y automatizaciones para que ninguna oportunidad quede sin trabajar. Nunca más un lead frío.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tower-wrapper fi fi-delay-2" aria-label="Torre de construcción animada">
+          <div id="tower" role="img" aria-label="Proceso de venta inmobiliario en 11 pasos">
+            <div class="floor floor-top">
+              <span class="floor-label">🏆 Ventas cerradas</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Escritura / Reserva</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Negociación</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Visita al proyecto</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Lead calificado</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Seguimiento activo</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Primer contacto</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Lead recibido</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Landing de captura</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">Campaña de pauta</span>
+            </div>
+            <div class="floor">
+              <span class="floor-label">🏗 Estrategia y diagnóstico</span>
+            </div>
+            <div class="tower-base"></div>
+          </div>
+          <div id="crane" class="crane" aria-hidden="true">
+            <div class="crane-arm"></div>
+            <div class="crane-mast"></div>
+            <div class="crane-hook"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. Problemas -->
+    <section aria-label="Problemas comunes en desarrollos inmobiliarios">
+      <div class="container">
+        <div class="fi section-intro">
+          <span class="kicker">Reconocés alguno de estos problemas?</span>
+          <h2 class="section-h2 section-h2-centered">Por qué los desarrollos<br />pierden oportunidades <em>todos los días.</em></h2>
+        </div>
+        <div class="problems-grid">
+          <div class="problem-card fi">
+            <div class="problem-num">01</div>
+            <div class="problem-title">Los leads se enfrían solos</div>
+            <div class="problem-desc">La demora en responder hace que elijan otra opción antes de que los llamen.</div>
+          </div>
+          <div class="problem-card fi fi-delay-1">
+            <div class="problem-num">02</div>
+            <div class="problem-title">No sabés dónde se pierden</div>
+            <div class="problem-desc">Sin sistema claro, es imposible ver en qué punto del proceso caen las oportunidades.</div>
+          </div>
+          <div class="problem-card fi fi-delay-2">
+            <div class="problem-num">03</div>
+            <div class="problem-title">Consultas dispersas por todos lados</div>
+            <div class="problem-desc">WhatsApp, portales, redes y formularios mezclados, difíciles de gestionar.</div>
+          </div>
+          <div class="problem-card fi fi-delay-3">
+            <div class="problem-num">04</div>
+            <div class="problem-title">No sabés qué canal convierte</div>
+            <div class="problem-desc">Invertís en varios medios sin certeza de cuál genera ventas reales.</div>
+          </div>
+          <div class="problem-card fi fi-delay-4">
+            <div class="problem-num">05</div>
+            <div class="problem-title">El seguimiento vive en WhatsApp</div>
+            <div class="problem-desc">Gestión informal, sin historial, sin control. Alto riesgo de perder oportunidades cercanas.</div>
+          </div>
+          <div class="problem-card fi fi-delay-5">
+            <div class="problem-num">06</div>
+            <div class="problem-title">Pauta sin retorno medible</div>
+            <div class="problem-desc">Presupuesto en Meta Ads o Google sin trackear conversiones ni optimizar lo que falla.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Caso real -->
+    <section class="case-section section-alt" aria-label="Caso de éxito — Proyecto Moyano">
+      <div class="container">
+        <div class="case-left">
+          <div class="case-badge fi">Meta Ads — LeadGen</div>
+          <h3 class="case-h3 fi fi-delay-1">Proyecto Moyano</h3>
+          <p class="case-location fi fi-delay-1">📍 El Palomar, Buenos Aires · 2025</p>
+          <p class="case-desc fi fi-delay-2">
+            Campaña de generación de leads en Meta Ads para un desarrollo de unidades en el GBA.
+            Segmentación por zona, perfil socioeconómico y etapa de decisión. Resultado: volumen de leads
+            a un costo muy por debajo del promedio del mercado para proyectos en la zona.
+          </p>
+          <div class="case-metrics fi fi-delay-3">
+            <div class="case-metric">
+              <span class="case-metric-num">169</span>
+              <span class="case-metric-label">Leads generados</span>
+            </div>
+            <div class="case-metric">
+              <span class="case-metric-num">$3.469</span>
+              <span class="case-metric-label">CPL en ARS</span>
+            </div>
+            <div class="case-metric">
+              <span class="case-metric-num">38K</span>
+              <span class="case-metric-label">Alcance zonal</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-right fi fi-delay-2">
+          <span class="kicker kicker-block">Embudo de la campaña</span>
+          <div class="funnel">
+            <div class="funnel-item">
+              <span class="funnel-label">Alcance zonal</span>
+              <span class="funnel-value">38.617</span>
+            </div>
+            <div class="funnel-arrow" aria-hidden="true">↓</div>
+            <div class="funnel-item">
+              <span class="funnel-label">Impresiones</span>
+              <span class="funnel-value">83.691</span>
+            </div>
+            <div class="funnel-arrow" aria-hidden="true">↓</div>
+            <div class="funnel-item highlight-blue">
+              <span class="funnel-label">Leads generados</span>
+              <span class="funnel-value">169</span>
+            </div>
+            <div class="funnel-arrow" aria-hidden="true">↓</div>
+            <div class="funnel-item highlight-green">
+              <span class="funnel-label">CPL final</span>
+              <span class="funnel-value">$3.469</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Números del mercado -->
+    <section aria-label="Estadísticas del mercado inmobiliario">
+      <div class="container">
+        <div class="fi section-intro">
+          <span class="kicker">El mercado en números</span>
+          <h2 class="section-h2">Los datos que hacen que<br /><em>el marketing importa.</em></h2>
+        </div>
+        <div class="numbers-grid">
+          <div class="number-card fi">
+            <span class="number-icon">🏗️</span>
+            <span class="number-big">+$2M</span>
+            <div class="number-title">Facturación adicional promedio con sistema activo</div>
+            <div class="number-desc">Proyectos con sistema de captación y seguimiento estructurado generan esta diferencia anual.</div>
+            <div class="number-source">Est. proyectos GBA 2023–2025</div>
+          </div>
+          <div class="number-card fi fi-delay-1">
+            <span class="number-icon">📈</span>
+            <span class="number-big">72%</span>
+            <div class="number-title">Leads perdidos sin seguimiento sistemático</div>
+            <div class="number-desc">Casi 3 de cada 4 consultas no se convierten por falta de un proceso estructurado.</div>
+            <div class="number-source">NAR 2024</div>
+          </div>
+          <div class="number-card fi fi-delay-2">
+            <span class="number-icon">⚡</span>
+            <span class="number-big">3x</span>
+            <div class="number-title">Más conversiones respondiendo en 5 minutos</div>
+            <div class="number-desc">La velocidad de respuesta es el factor #1 en la tasa de calificación de un lead.</div>
+            <div class="number-source">Harvard Business Review</div>
+          </div>
+          <div class="number-card fi fi-delay-3">
+            <span class="number-icon">💰</span>
+            <span class="number-big">-60%</span>
+            <div class="number-title">Reducción en CPL vs portales tradicionales</div>
+            <div class="number-desc">Meta Ads y Google bien configurados generan leads a una fracción del costo de los portales.</div>
+            <div class="number-source">IAB Argentina 2024</div>
+          </div>
+          <div class="number-card fi fi-delay-4">
+            <span class="number-icon">🎯</span>
+            <span class="number-big">8/10</span>
+            <div class="number-title">Compradores buscan en redes antes de contactar</div>
+            <div class="number-desc">La presencia en Meta e Instagram es ineludible en el proceso de decisión de compra.</div>
+            <div class="number-source">Google Real Estate 2024</div>
+          </div>
+          <div class="number-card fi fi-delay-5">
+            <span class="number-icon">🔄</span>
+            <span class="number-big">+35%</span>
+            <div class="number-title">Incremento en tasa de cierre con CRM</div>
+            <div class="number-desc">Un sistema de seguimiento estructurado transforma el trabajo del equipo comercial.</div>
+            <div class="number-source">Salesforce Latam 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Partners -->
+    <section class="partners-band" aria-label="Partners oficiales">
+      <div class="container">
+        <span class="partners-label">Partners oficiales</span>
+        <div class="partner-badge">
+          <span class="partner-icon">🔵</span>
+          Google Partner
+        </div>
+        <div class="partner-badge">
+          <span class="partner-icon">🔷</span>
+          Meta Business Partner
+        </div>
+        <div class="partner-badge">
+          <span class="partner-icon">🟠</span>
+          HubSpot Partner
+        </div>
+        <div class="partner-badge">
+          <span class="partner-icon">🟢</span>
+          Shopify Partner
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Formulario -->
+    <section class="cta-section section-alt" id="formulario" aria-label="Agendá tu diagnóstico gratuito">
+      <div class="container">
+
+        <div class="cta-left">
+          <span class="kicker fi">Diagnóstico gratuito · 20 minutos</span>
+          <h2 class="section-h2 fi fi-delay-1">¿Qué pasa en los<br /><em>20 minutos</em><br />de llamada?</h2>
+          <div class="diag-points">
+            <div class="diag-point fi fi-delay-1">
+              <span class="diag-icon">🔍</span>
+              <div class="diag-text">
+                <strong>Analizamos tu situación actual</strong>
+                <span>Canales activos, volumen de leads, métricas y puntos de fuga en tu proceso de ventas.</span>
+              </div>
+            </div>
+            <div class="diag-point fi fi-delay-2">
+              <span class="diag-icon">🗺️</span>
+              <div class="diag-text">
+                <strong>Identificamos oportunidades rápidas</strong>
+                <span>Te mostramos dónde podés mejorar resultados en menos de 30 días sin invertir más presupuesto.</span>
+              </div>
+            </div>
+            <div class="diag-point fi fi-delay-3">
+              <span class="diag-icon">📋</span>
+              <div class="diag-text">
+                <strong>Armamos un plan a medida</strong>
+                <span>Estrategia concreta para tu proyecto: qué canales activar, qué automatizar y cómo medir.</span>
+              </div>
+            </div>
+            <div class="diag-point fi fi-delay-4">
+              <span class="diag-icon">🤝</span>
+              <div class="diag-text">
+                <strong>Sin compromiso, sin vendedores</strong>
+                <span>Es una conversación con nuestro equipo, no un pitch. Si no somos la opción ideal, te lo decimos.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card fi fi-delay-2">
+          <div class="form-title">Agendá tu diagnóstico gratuito</div>
+          <form id="diag-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name" />
+              </div>
+              <div class="form-field">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 11 XXXX XXXX" required autocomplete="tel" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="desarrollo">Nombre del desarrollo</label>
+              <input type="text" id="desarrollo" name="desarrollo" placeholder="Ej: Torres del Lago" required />
+            </div>
+            <div class="form-field">
+              <label for="unidades">Cantidad de unidades</label>
+              <select id="unidades" name="unidades" required>
+                <option value="" disabled selected>Seleccioná una opción</option>
+                <option value="Menos de 20">Menos de 20 unidades</option>
+                <option value="20 a 50">20 a 50 unidades</option>
+                <option value="50 a 100">50 a 100 unidades</option>
+                <option value="Más de 100">Más de 100 unidades</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Quiero mi diagnóstico gratuito →
+            </button>
+          </form>
+          <div class="form-divider">o contactanos directo</div>
+          <a href="https://wa.me/5491125615082?text=Hola!%20Quiero%20agendar%20mi%20diagn%C3%B3stico%20gratuito%20para%20mi%20desarrollo%20inmobiliario."
+             class="btn btn-wa form-wa wa-link" target="_blank" rel="noopener"
+             aria-label="Contactar por WhatsApp">
+            Escribinos por WhatsApp
+          </a>
+          <p class="form-note">🔒 Tus datos no se comparten con terceros.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <img src="assets/logo.png" alt="MC Growth Agency" class="footer-logo" />
+      <nav class="footer-nav" aria-label="Links del footer">
+        <a href="#formulario">Diagnóstico</a>
+        <a href="#formulario">Servicios</a>
+        <a href="#formulario">Casos</a>
+        <a href="mailto:equipomcmarketing@gmail.com">Contacto</a>
+      </nav>
+      <p class="footer-copy">© 2025 MC Growth Agency · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- 14. WhatsApp flotante -->
+  <div class="wa-float" role="complementary" aria-label="Contacto rápido por WhatsApp">
+    <div class="wa-float-tooltip">¡Escribinos ahora!</div>
+    <a href="https://wa.me/5491125615082?text=Hola!%20Quiero%20agendar%20mi%20diagn%C3%B3stico%20gratuito%20para%20mi%20desarrollo%20inmobiliario."
+       class="wa-float-btn wa-link" target="_blank" rel="noopener"
+       aria-label="Abrir WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Scene first, then interactions -->
+  <script src="js/scene.js"></script>
+  <script src="js/building.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/forms.js" defer></script>
+
+</body>
+</html>
