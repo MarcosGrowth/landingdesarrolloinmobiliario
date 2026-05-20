@@ -84,9 +84,11 @@ main {
   padding-top: var(--nav-h);
   background: linear-gradient(
     90deg,
-    rgba(4,13,26,0.96) 40%,
-    rgba(4,13,26,0.72) 65%,
-    rgba(4,13,26,0.28) 100%
+    rgba(4,13,26,0.97) 0%,
+    rgba(4,13,26,0.95) 32%,
+    rgba(4,13,26,0.70) 52%,
+    rgba(4,13,26,0.18) 72%,
+    rgba(4,13,26,0.00) 100%
   );
   position: relative;
   overflow: hidden;
@@ -101,15 +103,20 @@ main {
     linear-gradient(90deg, rgba(33,150,243,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
+  /* grid only visible on the left opaque half */
+  -webkit-mask-image: linear-gradient(90deg, black 40%, transparent 65%);
+  mask-image: linear-gradient(90deg, black 40%, transparent 65%);
 }
 
 .hero .container {
   padding-top: 80px;
   padding-bottom: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 520px;
 }
 
 /* ── Sections base ── */
