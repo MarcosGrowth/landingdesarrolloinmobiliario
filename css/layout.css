@@ -19,7 +19,7 @@
   height: 3px;
   width: 0%;
   background: var(--blue-bright);
-  z-index: 999;
+  z-index: 50;
   transition: width 0.1s linear;
 }
 
@@ -36,7 +36,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 20;
   height: var(--nav-h);
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@ nav.scrolled .nav-logo {
 /* ── Main ── */
 main {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* ── Hero ── */
@@ -125,7 +125,7 @@ main {
 section {
   background: rgba(4, 13, 26, 0.88);
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 section .container {
@@ -254,7 +254,7 @@ footer {
   background: rgba(4, 13, 26, 0.98);
   border-top: 1px solid var(--border);
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 footer .container {
@@ -297,7 +297,7 @@ footer .container {
   position: fixed;
   bottom: 28px;
   right: 28px;
-  z-index: 200;
+  z-index: 30;
   display: flex;
   align-items: center;
   gap: 12px;

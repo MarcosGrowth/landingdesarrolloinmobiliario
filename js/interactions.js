@@ -24,7 +24,8 @@
   }, { passive: true });
 
   /* ── Scroll-reveal ── */
-  const revealEls = document.querySelectorAll('.fi');
+  /* .problems-grid / .numbers-grid cards are staggered via Motion instead (see motion-effects.js) */
+  const revealEls = document.querySelectorAll('.fi:not(.problems-grid .fi):not(.numbers-grid .fi)');
   if (revealEls.length) {
     const revealObserver = new IntersectionObserver(
       (entries) => {
