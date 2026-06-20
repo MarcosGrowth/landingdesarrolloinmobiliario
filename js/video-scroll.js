@@ -4,9 +4,11 @@
   var video = document.getElementById('bg-video');
   if (!video) return;
 
-  var duration = 0;
-  var ready    = false;
-  var ticking  = false;
+  var duration   = 0;
+  var ready      = false;
+  var ticking    = false;
+  var seeking    = false;
+  var pendingTime = null;
 
   function getScrollProgress() {
     var scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -14,13 +16,29 @@
     return docH > 0 ? Math.min(Math.max(scrollTop / docH, 0), 1) : 0;
   }
 
+  function seekTo(time) {
+    if (seeking) {
+      pendingTime = time;
+      return;
+    }
+    if (Math.abs(video.currentTime - time) <= 0.03) return;
+    seeking = true;
+    video.currentTime = time;
+  }
+
+  video.addEventListener('seeked', function () {
+    seeking = false;
+    if (pendingTime !== null) {
+      var time = pendingTime;
+      pendingTime = null;
+      seekTo(time);
+    }
+  });
+
   function scrubToProgress() {
     if (!ready || !duration) return;
     var progress = getScrollProgress();
-    var time     = progress * duration;
-    if (Math.abs(video.currentTime - time) > 0.03) {
-      video.currentTime = time;
-    }
+    seekTo(progress * duration);
     ticking = false;
   }
 
