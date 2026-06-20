@@ -9,7 +9,7 @@
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.01em;
-  transition: all 0.25s var(--transition);
+  transition: background-color 0.25s var(--transition), border-color 0.25s var(--transition), box-shadow 0.25s var(--transition);
   white-space: nowrap;
 }
 
@@ -22,7 +22,6 @@
 .btn-primary:hover {
   background: var(--blue-mid);
   border-color: var(--blue-mid);
-  transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(33,150,243,0.35);
 }
 
@@ -35,7 +34,6 @@
 .btn-wa:hover {
   background: #00b34a;
   border-color: #00b34a;
-  transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0,200,83,0.35);
 }
 
