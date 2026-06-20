@@ -1,5 +1,5 @@
-/* ── Canvas 3D ── */
-#bg-canvas {
+/* ── Video de recorrido 3D ── */
+#bg-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,6 +7,8 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  object-fit: cover;
+  background-color: var(--bg);
 }
 
 /* ── Scroll progress bar ── */

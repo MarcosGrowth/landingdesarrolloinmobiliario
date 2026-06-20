@@ -18,8 +18,10 @@
   <!-- 1. Scroll progress -->
   <div id="scroll-progress" role="progressbar" aria-label="Progreso de scroll"></div>
 
-  <!-- 2. Canvas 3D -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <!-- 2. Video de recorrido 3D (scroll-scrub) -->
+  <video id="bg-video" muted playsinline preload="auto" aria-hidden="true">
+    <source src="assets/recorrido-3d.mp4" type="video/mp4" />
+  </video>
 
   <!-- 3. Nav -->
   <nav role="navigation" aria-label="Navegación principal">
@@ -505,10 +507,8 @@
     </a>
   </div>
 
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- Scene first, then interactions -->
-  <script src="js/scene.js"></script>
+  <!-- Video scroll-scrub primero, luego interactions -->
+  <script src="js/video-scroll.js"></script>
   <script src="js/building.js" defer></script>
   <script src="js/interactions.js" defer></script>
   <script src="js/forms.js" defer></script>
